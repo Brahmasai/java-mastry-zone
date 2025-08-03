@@ -419,10 +419,10 @@ public class Logicals {
 		
 		
 		//Reverse a Number using scanner class
-		Scanner sc =  new Scanner(System.in);
+		/*Scanner sc =  new Scanner(System.in);
 		System.out.println("Enter Digits");
 		int num = sc.nextInt();
-		/*int rev = 0;
+		int rev = 0;
 		while(num!=0) {
 		rev = rev*10 + num%10;
 		num = num/10;
@@ -432,13 +432,286 @@ public class Logicals {
 			
 	  // Using StringBuffer & String Builder	
 			
-			StringBuffer sbf = new StringBuffer(String.valueOf(num));
+			/*StringBuffer sbf = new StringBuffer(String.valueOf(num));
 			StringBuffer sb =  sbf.reverse();
 			System.out.println(sb);
 			
 			StringBuilder sbl = new StringBuilder(String.valueOf(num));
-			System.out.println(sbl.reverse()); 
-	}
+			System.out.println(sbl.reverse());*/
+		
+		// Reverse a String 
+		/*String str ="parabrahmasai";
+		String rev ="";
+		for (int i = str.length()-1; i>=0; i--) {
+			rev = rev+str.charAt(i);
+		}
+		System.out.println(rev);
+		
+		//  Using StringBuilder
+		StringBuilder  sb = new StringBuilder(str);
+		System.out.println(sb.reverse());
+		// Using String buffer
+		StringBuffer sbf = new StringBuffer(str); 
+		System.out.println(sbf.reverse());
+		//Using to CharArray
+		char[] ch =   str.toCharArray();
+		String revs = "";
+		for(int i =ch.length-1; i>=0; i--) {
+			revs = revs+ch[i];
+		}
+		System.out.println(revs);*/
+		
+		// Palindrome
+		
+		/*int num = 1234567;
+		int acNum = num;
+		int rev = 0;
+		
+		while(num!=0) {
+			rev = rev*10+num%10;
+			num = num/10;
+			
+		}
+		if(acNum == rev) {
+			System.out.println("It's a Palindrome"); 
+		} else {
+			System.out.println("It's Not a Palindrome");
+		}*/
+		
+		// Palindrome String
+		/*String str = "parabrahmasai";
+		String actual = str;
+		String revs = "";
+		
+		for(int i=str.length()-1; i>=0; i--) {
+			revs = revs+str.charAt(i);
+		}
+		if (revs.equalsIgnoreCase(str)) {
+			System.out.println("It's a palindrome");
+		} else {
+			System.out.println("It's not a palindrome");
+		}*/
+		
+		//Finding no.of of digits available in given number
+		
+		/*int num = 12345;
+		int count = 0;
+		while(num > 0) {
+			num = num/10;
+			count++;
+		}
+		System.out.println(count);*/ 
+		
+		//Finding even and odd numbers in a number
+		
+		/*int num = 12345;
+		int evenNum = 0;
+		int oddNum = 0;
+		
+		while(num!=0) {
+			int rem = num%10;
+			if(rem%2==0) {
+				System.out.println("Even Number");
+				evenNum++;
+			} else {
+				System.out.println("Odd Number");
+				oddNum++;
+			}
+		}*/
+		
+		// Sum of digits in a number
+		/*int num =1234567;
+		int sum =0;
+		while (num !=0) {
+			sum = sum+ num%10;
+			num = num/10;
+		}
+		System.out.println(sum);*/
+		
+		// Finding largest numbers 
+		 /*int a=10, b =20, c=35;   
+		 
+		 int num = a>b?a:b;
+		 int largest = num>c?num:c;
+		 System.out.println(largest);*/
+		
+		// Fibonacci Series
+		/*int n1 =0, n2 =1, sum = 0, req=15;
+		for (int i =0; i<req; i++) {
+			sum = n1+n2;
+			System.out.println(sum);
+			n1 = n2;
+			n2 = sum;
+		}*/
+		
+		//Given number is prime or not
+		
+		/*Scanner sc = new Scanner(System.in);
+		System.out.println("enter a number");
+		int num =   sc.nextInt();
+		int count=0;
+		
+		if(num>1) {
+			for(int i =1; i<num; i++) {
+				if(num%i==0) {
+					count++;
+				}
+				
+			}
+			if(count==2) {
+				System.out.println("Prime");
+			} else {
+				System.out.println("it's not a prime");
+			}
+			
+		}*/
+		
+		//Find a factorial number
+		
+		
+		/*int num = 5, factorial = 1;
+		  for(int i=1; i<=num; i++) {
+		   factorial = factorial*i; }
+		  System.out.println(factorial); */
+		 
+		
+		
+		/*while(num!=0) {
+			factorial = factorial*num;
+			num--;
+		}
+		System.out.println(factorial);*/
+		
+		// Finding Even & odd numbers from an array
+		/*int a[] = {1,3,6,7,2,4,8,9};
+		int i=0;
+		while(i<a.length) {
+			if(a[i]%2==0) {
+				System.out.println("even Number" + a[i]);
+			} else {
+				System.out.println("odd Number" + a[i]);
+			}
+			i++;
+		}*/
+		
+		// Checking arrays are equal or not
+		/*int[] a1 = { 1, 2, 3, 4, 5, 6 };
+		int[] a2 = { 1, 2, 3, 4, 5, 6};
+		boolean status =  Arrays.equals(a1, a2);
+		if (status) {
+				System.out.println("length is equal");
+			
+		} else {
+			System.out.println("not equal");
+		}*/
+		//
+		/*int[] a1 = { 1, 2, 3, 4, 5, 6 };
+		int[] a2 = { 1, 2, 9, 4, 5, 6 };
+		boolean status = true;
+		if(a1.length == a2.length) {
+			for (int i=0; i<a1.length; i++) {
+				if(a1[i] != a2[i]) {
+					status = false;
+					 System.out.println("Mismatch at index " + i + ": a1[" + i + "] = " + a1[i] + ", a2[" + i + "] = " + a2[i]);
+				} 
+			}
+		} else {
+			status = false;
+		}
+		if (status) {
+			System.out.println("equal");
+		} else {
+			System.out.println("Not equal"); 
+		}*/
+		
+		//Finding missing number in a array
+		
+		/*int[] c = {1,2,4,5};
+		int sum =0, asum =0; 
+		for (int i =0; i<c.length; i++) {
+			sum = sum+c[i];
+		}
+		for(int i =1; i<=5; i++) {
+			asum = asum+i;
+		}
+		System.out.println(asum - sum);*/
+		
+		/*Using while loop*/
+		/*int i =0, j=1; 
+		while (i<c.length) {
+			sum = sum+c[i];
+			i++;
+		}
+		while (j<=5) {
+			asum = asum+j;
+			j++;
+		}
+		System.out.println(asum-sum);*/
+		
+		//Finding maximum & min element
+		
+		/*int[] sr = {15,27,38,59,65,2, 145,95};
+		int max=15;
+		int min=15;
 
-	
+		
+		for (int i =0; i<sr.length; i++) {
+			if(sr[i]>max) {
+				max = sr[i];
+			} else if (sr[i]<min) {
+				min = sr[i];
+			}
+		}
+		System.out.println("min" + min+ "max" + max);*/
+		
+		// Finding Duplicate element from an array
+		/*String[] sr = {"sai", "ram", "krishna", "Shiva", "gopal" ,"ram","shiva"};
+		boolean status = false;
+		for (int i= 0; i<sr.length; i++) {
+			for (int j= i+1; j<sr.length; j++) {
+				if(sr[i].equalsIgnoreCase(sr[j])) {
+					status = true;
+					System.out.println("Found Duplicate at index " + i+ " with this value " + sr[i]);
+				}
+			}
+		}
+		
+		if (!status) {
+			System.out.println("No Duplicates found Here");
+		}*/
+		
+		//
+		/*int[] arr = {2,4,3,6,7,3,8,2};
+		boolean status = false;
+		for(int i =0; i<arr.length; i++) {
+			for(int j=i+1; j<arr.length; j++) {
+				if(arr[i] == arr[j]) {
+					status = true;
+					System.out.println("Duplicate Element:" + arr[i]);
+				}
+			}
+		}
+		if(!status) {
+			System.out.println("No Duplicates:");
+		}*/
+		
+		// Searching element from an array
+		
+		int[] sr = {2,4,3,6,7,3,8,2};
+		
+		boolean flag =false;
+		int search = 3;
+		for (int i=0; i<sr.length; i++) {
+			if(sr[i] == search) {
+				System.out.println("Found a number: " +sr[i]);
+				flag =true;
+				break;
+			}
+		}
+		if (!flag) {
+			System.out.println("Not Found a number: " + search);
+		}
+		
+		
+	}
 }
