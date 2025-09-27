@@ -665,6 +665,7 @@ public class Logicals {
 		System.out.println("min" + min+ "max" + max);*/
 		
 		// Finding Duplicate element from an array
+		
 		/*String[] sr = {"sai", "ram", "krishna", "Shiva", "gopal" ,"ram","shiva"};
 		boolean status = false;
 		for (int i= 0; i<sr.length; i++) {
@@ -697,7 +698,7 @@ public class Logicals {
 		
 		// Searching element from an array
 		
-		int[] sr = {2,4,3,6,7,3,8,2};
+		/*int[] sr = {2,4,3,6,7,3,8,2};
 		
 		boolean flag =false;
 		int search = 3;
@@ -710,7 +711,20 @@ public class Logicals {
 		}
 		if (!flag) {
 			System.out.println("Not Found a number: " + search);
-		}
+		}*/
+		
+		// removing junk characters from array
+		
+		/*String sr =  "dgjhdf;kbsdfj783456348756#@$$^*(jdkgksf";
+		sr = sr.replaceAll("[^a-zA-Z0-9]", "");
+		System.out.println(sr);*/
+		
+		//find the index position for given element is presented
+		
+		int[] a1 = {1,2,4,6,7,9,6,4};
+		
+		int r =  Arrays.binarySearch(a1, 7);
+		System.out.println(r);
 		
 		
 	}
